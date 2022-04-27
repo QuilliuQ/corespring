@@ -2,11 +2,11 @@ package ru.sylas.corespring.model
 
 import ru.sylas.corespring.common.sha256
 import ru.sylas.corespring.common.Mapper
-import ru.sylas.corespring.entities.UserEntity
+import ru.sylas.corespring.entities.TestEntity
 
-data class User(val email:String,val password:String): Mapper<UserEntity> {
+data class Test(val email:String, val password:String): Mapper<TestEntity> {
     override fun map() =
-        UserEntity(
+        TestEntity(
             email = email,
             secret = password.sha256()
         )

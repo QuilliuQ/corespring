@@ -1,5 +1,5 @@
 package ru.sylas.corespring.entities
 
-interface EntityId<T> {
-    val id:T
+interface EntityId<T> :Entity{
+    val id:T?
 }

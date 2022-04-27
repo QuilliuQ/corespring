@@ -2,11 +2,12 @@ package ru.sylas.corespring.entities
 
 import org.hibernate.annotations.ColumnDefault
 import org.hibernate.annotations.Type
+import ru.sylas.corespring.common.Mapper
 import java.util.*
 import javax.persistence.*
 
 @MappedSuperclass
-abstract class UUIDEntity<T>: BaseEntity<UUID,T>() {
+abstract class UUIDEntity<T>: BaseEntity<UUID>(),Mapper<T> {
 
     @Id
     @Column(name = "id", nullable = false, unique = true)
